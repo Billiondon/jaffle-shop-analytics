@@ -15,8 +15,7 @@ Mise en place de l'infrastructure de données, qui permet d'établir une connexi
 ## Résultat du test d'effort
 Le dernier contrôle (dbt run) montre un succès total. La donnée circule normalement, le pipeline est stable.
 
-![Preuve du succès dbt](<img width="660" height="213" alt="image" src="https://github.com/user-attachments/assets/e90b5d4c-9454-4bd5-9fc0-b2fb487d5bb1" />
-)
+![Preuve du succès dbt](![](https://github.com/user-attachments/assets/e90b5d4c-9454-4bd5-9fc0-b2fb487d5bb1)
 
 ## Équipement utilisé
 * Entrepôt : Snowflake
