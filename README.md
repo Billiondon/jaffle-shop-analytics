@@ -1,22 +1,24 @@
 # Rapport d'Intégration : Pipeline Jaffle Shop Analytics
 
-**Statut du système :** Opérationnel / Stable
-**Environnement :** Snowflake (DB) + dbt Cloud (IDE)
-**Auteur :** Billiondon
+**Statut du système :** Opérationnel 
+**Environnement :** Snowflake et dbt Cloud 
 
-## 1. Synthèse du Projet
-Mise en œuvre d'une infrastructure de transformation de données (ELT). L'objectif était de sécuriser le flux entre l'entrepôt Snowflake et les modèles de sortie via dbt, en assurant une intégrité totale des droits d'accès et de la structure des schémas.
+## Résumé de l'intervention
+Mise en place de l'infrastructure de données, qui permet d'établir une connexion stable entre l'entrepôt (Snowflake) et l'unité de traitement (dbt), puis de valider la circulation des informations sans perte ni erreur.
 
-## 2. Protocole Technique (Interventions)
-Le déploiement a suivi le protocole de rigueur suivant :
-* **Accès Data Warehouse :** Configuration et isolation du rôle `ACCOUNTADMIN`. Ciblage exclusif de la base `DEMO_DB`.
-* **Architecture dbt :** Initialisation des répertoires et purge des modèles d'exemple non conformes.
-* **Modélisation :** Création du modèle `customers.sql` (test de charge positif).
-* **Versionnage :** Workflow Git validé via Pull Request documentée et fusion (Merge) sur branche principale.
+## Protocole suivi
+* **Ouverture des accès :** Configuration des droits d'administration pour débloquer le circuit de données (Rôle ACCOUNTADMIN).
+* **Nettoyage du foyer :** Suppression des fichiers d'exemples inutiles pour garantir un environnement de travail sain.
+* **Test de flux :** Création d'un premier modèle (`customers.sql`) pour vérifier la réponse du système.
+* **Validation Git :** Sauvegarde et archivage de l'intervention sur le dépôt principal.
 
-## 3. Validation (Test d'effort)
-Le dernier `dbt run` confirme une exécution sans erreur. La donnée est correctement traitée et disponible dans le schéma cible.
+## Résultat du test d'effort
+Le dernier contrôle (dbt run) montre un succès total. La donnée circule normalement, le pipeline est stable.
 
-## 4. Spécifications
-* **Stack :** Snowflake, dbt Cloud, GitHub.
-* **Langage :** SQL (DML/DDL).
+![Preuve du succès dbt](<img width="660" height="213" alt="image" src="https://github.com/user-attachments/assets/e90b5d4c-9454-4bd5-9fc0-b2fb487d5bb1" />
+)
+
+## Équipement utilisé
+* Entrepôt : Snowflake
+* Traitement : dbt Cloud
+* Archivage : GitHub
